@@ -2,13 +2,13 @@ import os
 from box.exceptions import BoxValueError
 import yaml
 from textSummarizer.logging import logger
-from ensure import ensure_annotation
+from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 
 from typing import Any
 
-@ensure_annotation
+@ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
 
@@ -34,7 +34,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     
 
 
-@ensure_annotation
+@ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
 
@@ -49,7 +49,7 @@ def create_directories(path_to_directories: list, verbose=True):
 
 
 
-@ensure_annotation
+@ensure_annotations
 def get_size(path: Path) -> str:
     """get size in KB
 
